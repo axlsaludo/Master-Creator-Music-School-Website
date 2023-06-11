@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Home{% endblock %}</title>
+    {% block css %}<link rel="stylesheet" href="/static/css/home.css" />{% endblock %}
+  </head>
+  <body>
+  <div class="MainTitle">
+      <div class="logoContainer">
+          <a href="/">
+              <img class="logo" src="/static/attachments/Logo.png" alt="logo">
+          </a>
+          <span style="color:darkslateblue;" class="MainText">Master Creators Music School</span>
+      </div>
+  </div>
+  <nav>
+      <div>
+          <ul>
+              <li><a href = "/">HOME</a></li>
+              <li><a href = "/teacher">TEACHER</a></li>
+              <li><a href = "/course">COURSE</a></li>
+              <li><a href = "/about">ABOUT</a></li>
+          </ul>
+      </div>
+  </nav>
+  {% block cart %}
+  <a href = "/cart" class = "floating-button"><img class="imgfloat" src="/static/attachments/cart.jpg" alt="cart"></a>
+  {% endblock %}
+
+  {% block Main %}
+  This is the Base
+  {% endblock %}
+
+  </body>
+  <footer>
+      <p>&copy; 2023 Master Creators Music School. All rights reserved.</p>
+  </footer>
+
+</html>

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block css %}
+<link rel="stylesheet" href="/static/css/courses.css" />
+{% endblock %}
+{% block title %}Home{% endblock %}
+
+{% block Main %}
+{% with messages = get_flashed_messages(with_categories=true) %}
+
+{% if messages %}
+<div class="flash-messages">
+    {% for category, message in messages %}
+    <div class="flash-message flash-{{ category }}">
+        <span class="flash-text">{{ message }}</span>
+        <button class="flash-close" onclick="this.parentElement.style.display='none'">&times;</button>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% endwith %}
+
+<main>
+    <section class="Course-Top">
+        <div class="container">
+        <h1>Courses</h1>
+        <p>A place where you could be creative</p>
+      </div>
+    </section>
+
+    <div class="container">
+
+        <div class="tile-container">
+            {% for course in courses %}
+
+            <div class="tile">
+                <h2>{{ course['name'] }}</h2>
+                <h3>Price: ₱{{ course['price'] }}</h3>
+                <p class="Info">{{ course['description'] }}</p>
+                <form action="{{ url_for('add_to_cart', product_id=course['id']) }}" method="get">
+                    <input class="button" type="submit" value="Add to Cart">
+                </form>
+            </div>
+
+            {% endfor %}
+        </div>
+
+    </div>
+</main>
+
+{% endblock %}

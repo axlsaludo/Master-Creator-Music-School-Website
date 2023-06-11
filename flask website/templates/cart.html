@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% block css %}
+<link rel="stylesheet" href="/static/css/cart.css" />
+{% endblock %}
+{% block title %}Cart{% endblock %}
+{% block cart %} {% endblock %}
+
+{% block Main %}
+<main>
+  {% block content %}
+
+  <div class="container">
+    {% for message in get_flashed_messages() %}
+    <div class="flash">
+      <button type="button" class="close" data-dismiss="alert" class="checkout-btn">&times;</button>
+      {{ message }}
+    </div>
+    {% endfor %}
+    {% block page_content %}{% endblock %}
+  </div>
+
+  {% endblock %}
+
+  <h1>Cart Information</h1>
+
+  <div class="container">
+    <div class="cart-section">
+      <div id="cart-items" class="wowie">
+        {% if cart|length == 0 %}
+
+        <!-- Temporary course -->
+        <div class="course-tile">
+
+          <h3>Your Course Here</h3>
+
+          <form class="level-form" action="/update_price/0" method="post">
+            <input type="hidden" name="course_id" value="0">
+            <div class="selbel"><label for="level">Select Level:</label></div>
+
+            <div class="minimal-dropdown">
+              <select name="level" id="level">
+                <option value="beginner">Beginner</option>
+                <option value="amateur">Amateur</option>
+                <option value="advanced">Advanced</option>
+                <option value="pro">Pro</option>
+              </select>
+            </div>
+
+          </form>
+
+        </div>
+
+        {% endif %}
+
+        {% for course_id, course in cart.items() %}
+        <div class="course-tile">
+          <h3>{{ course['name'] }}</h3>
+          <form class="level-form" action="/update_price/{{ course_id }}" method="post">
+            <input type="hidden" name="course_id" value="{{ course_id }}">
+            <div class="selbel"><label for="level">Select Level:</label></div>
+            <div class="minimal-dropdown">
+
+              <select name="level" id="level" onchange="this.form.submit()">
+                <option value="beginner" {% if course['selected_level'] == 'beginner' %}selected{% endif %}>Beginner</option>
+                <option value="amateur" {% if course['selected_level'] == 'amateur' %}selected{% endif %}>Amateur</option>
+                <option value="advanced" {% if course['selected_level'] == 'advanced' %}selected{% endif %}>Advanced</option>
+                <option value="pro" {% if course['selected_level'] == 'pro' %}selected{% endif %}>Pro</option>
+              </select>
+
+            </div>
+          </form>
+        </div>
+
+        {% endfor %}
+
+      </div>
+
+    </div>
+
+    <div class="receipt-section">
+
+      <h1>Receipt</h1>
+      <div id="receipt-items">
+
+        {% for course_id, course in cart.items() %}
+
+        <div class="receipt-item">
+          <div class="receipt-item-name">{{ course['name'] }}</div>
+          <div class="receipt-item-price">₱{{ course['price'] }}</div>
+        </div>
+
+        {% endfor %}
+
+      </div>
+      <form action="/checkout" method="get" target="_blank" class="bonton">
+        <button type="submit" class="checkout-btn">Print Receipt</button>
+      </form>
+
+    </div>
+
+  </div>
+
+</main>
+{% endblock %}

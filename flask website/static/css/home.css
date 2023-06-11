@@ -1,0 +1,484 @@
+body{
+  background-color: white;
+  font-family: sans-serif;
+}
+/*
+  Floating button
+*/
+
+.imgfloat{
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid lightslategrey;
+}
+
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+.floating-button:hover {
+  background-color: #666;
+  transform: scale(1.1);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/*
+  header and nav bar design controls
+*/
+
+.MainTitle{
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  padding: 0;
+  -webkit-text-stroke: 1px black;
+}
+
+
+/*
+  Logo
+*/
+
+.logoContainer{
+  justify-content: center;
+  display: flex;
+  font-size: 55px;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+}
+
+.logo{
+  width: 80px;
+  height: 80px;
+  margin: 0;
+  padding-right: 2px;
+  justify-content: center;
+  vertical-align: middle;
+}
+
+/*
+  Logo Text
+*/
+
+.MainText{
+  vertical-align: center;
+  justify-content: center;
+}
+
+/*
+  Nav Bar
+*/
+
+nav{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 52px;
+  margin: 0;
+  padding: 0;
+  background-color: #0077b5;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 52px;
+  background-color: #0077b5;
+}
+
+nav ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+nav a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-shadow: 0px 0px 5px slategrey;
+  padding: 17px 30px;
+  transition: 0.6s ease;
+  width: 52px;
+  display: block;
+  text-align: center;
+}
+
+nav a:hover{
+  background-color: transparent;
+  color: rgb(2, 2, 176);
+}
+
+/*
+ this is the start of the main function
+*/
+
+.Main {
+  background-image: url('/static/attachments/Main.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.Main h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.Main p {
+  font-size: 20px;
+  margin-bottom: 40px;
+  max-width: 600px;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  background-color: #0077b5;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #005d8e;
+}
+
+.content {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/*
+ Courses part
+*/
+
+.courses{
+  padding-top: 50px;
+}
+
+.grid {
+  padding: 50px 10px 50px;
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 30px;
+  margin: 0 170px;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin: 20px;
+}
+
+.card p {
+  font-size: 16px;
+  margin: 0 20px 20px;
+}
+
+.card .button {
+  display: block;
+  text-align: center;
+  background-color: #0077b5;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.card .button:hover {
+  background-color: #005d8e;
+}
+
+.Mbutton{
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.checkB{
+  text-align: center;
+  display: inline-block;
+  background-color: #0077b5;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 20px;
+  transition: background-color 0.3s ease;
+}
+
+/*
+ Teachers Tab
+*/
+
+
+.Teachers{
+  background-color: #7bbcea;
+  text-align: center;
+}
+
+.Teachers h2{
+  font-size: 50px;
+  padding-top: 50px;
+  color: black;
+}
+
+.Tgrid {
+  padding: 10px 10px 50px;
+  display: flex;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.person-card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.person-card img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.person-card h3 {
+  margin: 0;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.person-card p {
+  margin: 5% 0 0;
+  font-size: 1em;
+  line-height: 1.4;
+  color: #666;
+}
+
+/*
+This is the About Page CSS
+ */
+
+.History {
+  background-image: url('/static/attachments/History.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  opacity: 85%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.History h1 {
+  text-shadow: #333333;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.History p {
+  text-shadow: #333333;
+  font-size: 20px;
+  margin-bottom: 40px;
+  max-width: 800px;
+  text-align: left;
+}
+
+/*
+Mission Vision - Part
+ */
+
+.PVM{
+  margin-left: 50px;
+  margin-right: 50px;
+  height: 400px;
+  display: flex;
+  opacity: 85%;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+
+.PVM h1 {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-shadow: #333333;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.PVM p {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-shadow: #333333;
+  font-size: 18px;
+  margin-bottom: 40px;
+  max-width: 800px;
+  text-align: left;
+}
+
+.Goals{
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: #0077b5;
+  text-align: center;
+  justify-content: center;
+  height: 500px;
+  display: flex;
+  color: white;
+}
+
+.Goals h1{
+  font-size: 60px;
+  padding-top: 140px;
+}
+
+.Goals ol{
+  padding-left: 100px;
+  padding-top: 40px;
+  font-size: 20px;
+  max-width: 800px;
+  text-align: left;
+}
+
+/*
+About us Section
+ */
+
+
+.aboutUs h1{
+  font-size: 60px;
+  text-align: center;
+}
+.persons-container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.person {
+  flex-basis: 23%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.person img {
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.person .name {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.person .info {
+  font-size: 20px;
+  color: #888;
+}
+/*
+teachers section
+ */
+
+.Teachers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+  padding: 50px 200px 20px;
+}
+
+.Teachers-card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.Teachers-card img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.Teachers-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.Teachers-card p {
+  font-size: 16px;
+  color: #666666;
+}
+
+.Teachers-Top{
+  background-image: url('/static/attachments/conductor.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  opacity: 97%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}

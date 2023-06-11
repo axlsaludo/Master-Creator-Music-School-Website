@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block Main %}
+
+<section class="Main">
+    <div class="container">
+        <h1>Welcome to Master Creators Music School </h1>
+        <p>Home of the many word renowned musicians.</p>
+        <a href="/course" class="button">Explore Courses</a>
+    </div>
+</section>
+
+<section class="courses">
+    <div class="container">
+
+        <h2>Popular Courses</h2>
+
+        <div class="grid">
+
+            <div class="card">
+                <img src="/static/attachments/Guitar.jpg">
+                <h3>Guitar</h3>
+                <p>With the help of your teacher (insert teacher here) your skill could level up in just a matter of few months if you follow the course and attend classes</p>
+            </div>
+
+            <div class="card">
+                <img src="/static/attachments/Drums.jpg">
+                <h3>Drums</h3>
+                <p>With the help of your teacher (insert teacher here) your skill could level up in just a matter of few months if you follow the course and attend classes</p>
+            </div>
+
+          <div class="card">
+              <img src="/static/attachments/Bass.jpg">
+              <h3>Bass</h3>
+              <p>With the help of your teacher (insert teacher here) your skill could level up in just a matter of few months if you follow the course and attend classes</p>
+          </div>
+
+            <div class="card">
+                <img src="/static/attachments/Piano.jpg">
+                <h3>Piano</h3>
+                <p>With the help of your teacher (insert teacher here) your skill could level up in just a matter of few months if you follow the course and attend classes</p>
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+<section class="Mbutton">
+    <a href="/course" class="checkB">Check Other Courses</a>
+</section>
+
+<section class="Teachers">
+    <h2>Top Teachers</h2>
+
+    <div class="Tgrid">
+
+    <div class="person-card">
+    <img src="/static/attachments/Person.jpeg">
+    <h3>Teacher 1</h3>
+        <p>Short description about the person goes here.</p>
+    </div>
+
+    <div class="person-card">
+    <img src="/static/attachments/Person.jpeg">
+    <h3>Teacher 2</h3>
+        <p>Short description about the person goes here.</p>
+    </div>
+
+    <div class="person-card">
+    <img src="/static/attachments/Person.jpeg">
+    <h3>Teacher 3</h3>
+        <p>Short description about the person goes here.</p>
+    </div>
+
+    <div class="person-card">
+    <img src="/static/attachments/Person.jpeg">
+    <h3>Teacher 4</h3>
+        <p>Short description about the person goes here.</p>
+    </div>
+
+    </div>
+</section>
+
+{% endblock %}
