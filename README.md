@@ -5,5 +5,5 @@ With Flask as its backbone, Master-Creator Web efficiently handles routing and H
 
 As aspiring Computer Engineering students, we are continually learning and improving our skills. Master-Creator Website represents the knowledge and expertise gained during our journey, and we are excited to share it with the wider community. The source code for Master-Creator Web is available here on GitHub, enabling fellow developers to study, contribute, and adapt the project to their specific needs. Hope this helps
 
-## Here is a Preview of the Homepage
+## Here is a Preview of the Home Page
 ![Screenshot (250)](https://github.com/ewanmoak/Master-Creator-Music-School-Website/assets/79072016/36be36a0-887f-46d2-bab9-7b7335902b36)
